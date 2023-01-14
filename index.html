@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/stylesheets/style.css" />
+    <title>Curriculum Vitae</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Curriculum Vitae</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#seccionDatos">Datos Personales</a></li>
+        <li><a href="#seccionFormacion">Formación Académica</a></li>
+        <li><a href="#seccionRedes">Redes Sociales</a></li>
+        <li><a href="#seccionHabilidades">Habilidades</a></li>
+        <li><a href="#seccionGaleria">Galería</a></li>
+        <li><a href="#seccionContactenos">Contáctenos</a></li>
+      </ul>
+    </nav>
+
+    <section id="seccionDatos">
+      <h2>Datos personales</h2>
+      <span>Nombres:</span>
+      <span>Byron</span>
+      <span>Apellidos:</span>
+      <span>León Liang</span>
+      <p>¡Hola! Soy Byron León Liang, con experiencia en Desarrollo Web en FrontEnd y BackEnd. Participo en todas las etapas del ciclo de desarrollo de proyectos web dinámicos. Además, tengo sólidos conocimientos en gestión de proyectos y relaciones con los clientes.</p>
+    </section>
+
+    <section id="seccionFormacion">
+      <h2>Formación Académica:</h2>
+      <h3>Coding Bootcamp ESPOL</h3>
+      <p>ESPOL | Enero 2022 - Julio 2022</p>
+      <h3>Lic. en Producción para Medios de Comunicación</h3>
+      <p>ESPOL | 2017-2021</p>
+    </section>
+
+    <section id="seccionRedes">
+      <h2>Redes sociales</h2>
+      <span><a href="https://www.linkedin.com/in/byronleonliang/" target="_blank">LinkedIn</a></span><br>
+      <span><a href="https://github.com/helloimbyron" target="_blank">Github</a></span>
+    </section>
+
+    <section id="seccionHabilidades">
+      <h2>Habilidades Profesionales:</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>ReactJS</li>
+        <li>Django</li>
+        <li>Express</li>
+      </ul>
+  
+      <h2>Idiomas:</h2>
+      <table>
+        <caption>Habilidad en idiomas</caption>
+        <tr>
+          <th></th>
+          <th>Básico</th>
+          <th>Intermedio</th>
+          <th>Avanzado</th>
+          <th>Nativo</th>
+        </tr>
+        <tr>
+          <th>Inglés</th>
+          <td></td>
+          <td align="center">X</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Español</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td align="center">X</td>
+        </tr>
+      </table>
+  
+      <h2>Contenidos Transversales:</h2>
+      <ol>
+        <li>Docker</li>
+        <li>AWS</li>
+        <li>CI/CD</li>
+        <li>Scrum</li>
+      </ol>
+    </section>
+
+    <aside id="seccionGaleria">
+      <img src="public/images/reading.jpg" width="30%" alt="Reading">
+      <img src="https://cdn.pixabay.com/photo/2015/05/29/19/18/cafe-789635_960_720.jpg" width="30%" alt="Foto de colaboración">
+    </aside>
+
+    <section id="seccionContactenos">
+      <h2>Contáctame:</h2>
+      <h3>Sus datos:</h3>
+  
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre"><br><br>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos"><br><br>
+  
+        <label for="edad">Seleccione su rango de edad:</label><br>
+        <input type="radio" id="edad1" name="edad" value="menor25">
+        <label for="edad1">Menor a 25 años</label>
+        <input type="radio" id="edad2" name="edad" value="entre26y20">
+        <label for="edad2">Entre 26 y 30 años</label>
+        <input type="radio" id="edad3" name="edad" value="mayor31">
+        <label for="edad3">Mayor a 31 años</label><br><br>
+  
+        <label for="tiposervicio">Seleccione el tipo de servicio a consultar:</label><br>
+        <input type="checkbox" name="frontend" id="frontend">
+        <label for="frontend">FrontEnd Dev</label><br>
+        <input type="checkbox" name="backend" id="backend">
+        <label for="backend">BackEnd Dev</label><br>
+        <input type="checkbox" name="scrum" id="scrum">
+        <label for="scrum">Desarrollo de software</label><br>
+        <input type="checkbox" name="cicd" id="cicd">
+        <label for="cicd">CI/CD</label><br><br>
+  
+        <input type="submit" value="Enviar">
+      </form>
+  
+      <h3>Ubicación</h3>
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838.1419020224108!2d-79.88740145184396!3d-2.1925946499275013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6e7714f34cdd%3A0x50df4139643a71c3!2sFrancisco%20Javier%20Aguirre%20Y%20Abad%20%26%20Lorenzo%20de%20Garaycoa%2C%20Guayaquil%20090312!5e0!3m2!1ses!2sec!4v1673644071158!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <br>
+    </section>
+
+    <footer>
+      <address>
+        Email: <a href="mailto:byleonliang@outlook.com">byleonliang@outlook.com</a><br>
+        Teléfono: <a href="tel:+593962676852">0962676852</a><br>
+        L. Garaicoa 1204 y Aguirre<br>
+        Guayaquil<br>
+        Ecuador
+      </address>
+    </footer>
+
+  </body>
+</html>
