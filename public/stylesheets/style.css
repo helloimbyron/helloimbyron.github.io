@@ -1,0 +1,27 @@
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-style: italic;
+}
+
+p, span {
+  text-align: center;
+}
+
+#seccionDatos {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#seccionRedes {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+a {
+  font-weight: 600;
+}
