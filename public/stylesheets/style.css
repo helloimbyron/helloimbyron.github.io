@@ -11,17 +11,48 @@ p, span {
   text-align: center;
 }
 
+a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
 #seccionDatos {
+  font-size: 1.4rem;
+  color: #373B41;
   width: 50%;
   margin: 0 auto;
+  margin-top: 6%;
 }
 
 #seccionRedes {
+  text-align: center;
   width: 30%;
   margin: 0 auto;
+}
+
+#seccionHabilidades table {
+  margin: 0 auto;
+}
+
+#seccionHabilidades table td {
   text-align: center;
 }
 
-a {
-  font-weight: 600;
+.seccion {
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2% !important;
+  margin-bottom: 2% !important;
+  padding: 2%;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 12%), 0 1px 4px rgb(0 0 0 / 24%);
 }
+
+section h2 {
+  color: #0BCC7B;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
