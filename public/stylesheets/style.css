@@ -38,6 +38,35 @@ a {
   text-align: center;
 }
 
+#seccionContactenos {
+  display: grid;
+  grid-template-areas:
+    "contacto contacto contacto contacto"
+    "dato dato ubicacion ubicacion"
+    "formulario formulario mapa mapa"
+    "formulario formulario mapa mapa";
+}
+
+#seccionContactenos .título-contacto {
+  grid-area: contacto;
+}
+
+#seccionContactenos .título-datos {
+  grid-area: dato;
+}
+
+#seccionContactenos .título-ubicacion {
+  grid-area: ubicacion;
+}
+
+#seccionContactenos .formulario-contacto {
+  grid-area: formulario;
+}
+
+#seccionContactenos .div-mapa {
+  grid-area: mapa;
+}
+
 .seccion {
   background-color: white;
   width: 50%;
