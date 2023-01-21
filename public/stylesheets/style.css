@@ -1,4 +1,6 @@
 
+/* Actividad en Previa 4 */
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -7,13 +9,9 @@ h1 {
   font-style: italic;
 }
 
-p, span {
+p,
+span {
   text-align: center;
-}
-
-a {
-  font-weight: 600;
-  text-decoration: none;
 }
 
 #seccionDatos {
@@ -30,6 +28,33 @@ a {
   margin: 0 auto;
 }
 
+
+
+/* Actividad en Clase 4 */
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+section h2 {
+  color: #0BCC7B;
+}
+
+.seccion {
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2% !important;
+  margin-bottom: 2% !important;
+  padding: 2%;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 12%), 0 1px 4px rgb(0 0 0 / 24%);
+}
+
 #seccionHabilidades table {
   margin: 0 auto;
 }
@@ -38,13 +63,17 @@ a {
   text-align: center;
 }
 
+
+
+/* Actividad en Previa 5 */
+
 #seccionContactenos {
   display: grid;
   grid-template-areas:
     "contacto contacto contacto contacto"
     "dato dato ubicacion ubicacion"
-    "formulario formulario mapa mapa"
     "formulario formulario mapa mapa";
+  column-gap: 25px;
 }
 
 #seccionContactenos .título-contacto {
@@ -67,21 +96,44 @@ a {
   grid-area: mapa;
 }
 
-.seccion {
-  background-color: white;
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 2% !important;
-  margin-bottom: 2% !important;
-  padding: 2%;
-  box-shadow: 0 1px 6px rgb(0 0 0 / 12%), 0 1px 4px rgb(0 0 0 / 24%);
+iframe {
+  width: 100%;
+  height: 100%;
+  border:0;
 }
 
-section h2 {
-  color: #0BCC7B;
-}
+
+
+/* Actividad en Clase 5A */
 
 nav ul {
-  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+/* Actividad en Clase 5B */
+
+address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* Actividad en Clase 5C */
+
+form,
+form .contenedor-datos,
+form .contenedor-edad,
+form .contenedor-servicio {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  row-gap: 10px;
 }
 

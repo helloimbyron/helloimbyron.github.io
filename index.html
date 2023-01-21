@@ -11,7 +11,7 @@
   <body>
 
     <header>
-      <h1>Curriculum Vitae</h1>
+      <h1>Currículum Vitae</h1>
     </header>
 
     <nav>
@@ -101,49 +101,73 @@
     <section id="seccionContactenos" class='seccion'>
       <h2 class="título-contacto">Contáctame:</h2>
       <h3 class="título-datos">Sus datos:</h3>
-  
+
       <form class="formulario-contacto">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre"><br><br>
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" name="apellidos" id="apellidos"><br><br>
-  
-        <label for="edad">Seleccione su rango de edad:</label><br>
-        <input type="radio" id="edad1" name="edad" value="menor25">
-        <label for="edad1">Menor a 25 años</label><br>
-        <input type="radio" id="edad2" name="edad" value="entre26y20">
-        <label for="edad2">Entre 26 y 30 años</label><br>
-        <input type="radio" id="edad3" name="edad" value="mayor31">
-        <label for="edad3">Mayor a 31 años</label><br><br>
-  
-        <label for="tiposervicio">Seleccione el tipo de servicio a consultar:</label><br>
-        <input type="checkbox" name="frontend" id="frontend">
-        <label for="frontend">FrontEnd Dev</label><br>
-        <input type="checkbox" name="backend" id="backend">
-        <label for="backend">BackEnd Dev</label><br>
-        <input type="checkbox" name="scrum" id="scrum">
-        <label for="scrum">Desarrollo de software</label><br>
-        <input type="checkbox" name="cicd" id="cicd">
-        <label for="cicd">CI/CD</label><br><br>
-  
+
+        <div class="contenedor-datos">
+          <label for="nombre">
+            <span>Nombre:</span>
+            <input type="text" name="nombre" id="nombre">
+          </label>
+          <label for="apellidos">
+            <span>Apellidos:</span>
+            <input type="text" name="apellidos" id="apellidos">
+          </label>
+        </div>
+
+        <div class="contenedor-edad">
+          <label for="edad">Seleccione su rango de edad:</label>
+          <label for="edad1">
+            <input type="radio" id="edad1" name="edad" value="menor25">
+            <span>Menor a 25 años</span>
+          </label>
+          <label for="edad2">
+            <input type="radio" id="edad2" name="edad" value="entre26y20">
+            <span>Entre 26 y 30 años</span>
+          </label>
+          <label for="edad3">
+            <input type="radio" id="edad3" name="edad" value="mayor31">
+            <span>Mayor a 31 años</span>
+          </label>
+        </div>
+
+        <div class="contenedor-servicio">
+          <label for="tiposervicio">Seleccione el tipo de servicio a consultar:</label>
+          <label for="frontend">
+            <input type="checkbox" name="frontend" id="frontend">
+            <span>FrontEnd Dev</span>
+          </label>
+          <label for="backend">
+            <input type="checkbox" name="backend" id="backend">
+            <span>BackEnd Dev</span>
+          </label>
+          <label for="scrum">
+            <input type="checkbox" name="scrum" id="scrum">
+            <span>Desarrollo de software</span>
+          </label>
+          <label for="cicd">
+            <input type="checkbox" name="cicd" id="cicd">
+            <span>CI/CD</span>
+          </label>
+        </div>
+
         <input type="submit" value="Enviar">
       </form>
   
       <h3 class="título-ubicacion">Ubicación</h3>
       <div class="div-mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838.1419020224108!2d-79.88740145184396!3d-2.1925946499275013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6e7714f34cdd%3A0x50df4139643a71c3!2sFrancisco%20Javier%20Aguirre%20Y%20Abad%20%26%20Lorenzo%20de%20Garaycoa%2C%20Guayaquil%20090312!5e0!3m2!1ses!2sec!4v1673644071158!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.023651929019!2d-79.9678838!3d-2.144626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x66c18bd9810f31cb!2sFacultad%20de%20Ingenier%C3%ADa%20en%20Electricidad%20y%20Computaci%C3%B3n%20FIEC%20-%20ESPOL!5e0!3m2!1ses!2sec!4v1674264324472!5m2!1ses!2sec" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
-      <br>
-    </section>
+    </section><br>
 
     <footer>
       <address>
-        Email: <a href="mailto:byleonliang@outlook.com">byleonliang@outlook.com</a><br>
-        Teléfono: <a href="tel:+593962676852">0962676852</a><br>
-        L. Garaicoa 1204 y Aguirre<br>
-        Guayaquil<br>
-        Ecuador
+        <div>Email: <a href="mailto:contacto@byron.com.com">contacto@byron.com</a></div>
+        <div>Teléfono: <a href="tel:+593123456789">0123456789</a></div>
+        <div>Calle X entre la Y y la Z</div>
+        <div>Guayaquil</div>
+        <div>Ecuador</div>
       </address>
     </footer>
 
