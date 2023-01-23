@@ -1,0 +1,74 @@
+
+:root {
+	--titulo: 4.8rem;
+  --textos: 2rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  /* Todos los elementos HTML usarán la fuente "Open Sans", sans-serif. */
+  font-family: "Open Sans", sans-serif;
+  box-sizing: inherit;
+}
+
+h1, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--titulo);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  width: 35rem;
+}
+
+p, span, a {
+  font-size: var(--textos);
+  text-align: center;
+  text-decoration: none;
+}
+
+span {
+  display: block;
+}
+
+body {
+  /* El elemento body sin margen y sin relleno. */
+  margin: 0;
+  padding: 10rem 0 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.formulario {
+  display: flex;
+  padding: 5rem;
+  border: black solid 0.1rem;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  align-items: center;
+}
+
+.formulario__campo {
+  width: 25rem;
+  height: 3rem;
+}
+
+#formulario__enviar {
+  width: 20rem;
+  height: 3rem;
+  cursor: pointer;
+}

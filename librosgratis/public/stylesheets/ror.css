@@ -1,0 +1,123 @@
+
+:root {
+	--titulo: 6.4rem;
+	--subtitulo: 3.2rem;
+  --textos: 2rem;
+  --imagen-ancho: 10rem;
+  --imagen-alto: 12.5rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  /* Todos los elementos HTML usarán la fuente "Open Sans", sans-serif. */
+  font-family: "Open Sans", sans-serif;
+  box-sizing: inherit;
+}
+
+body {
+  /* El elemento body sin margen y sin relleno. */
+  margin: 0;
+  padding: 2.5rem;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--titulo);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: var(--subtitulo);
+  font-weight: 900;
+}
+
+h3 {
+  font-size: var(--subtitulo);
+}
+
+p, span, a {
+  font-size: var(--textos);
+  text-align: justify;
+  text-decoration: none;
+}
+
+.portada {
+  margin: 0;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 2.5fr 0.5fr 0.5fr;
+  grid-template-areas:
+    "titulo titulo"
+    "libro descripcion"
+    ". publicacion"
+    ". .";
+  column-gap: 5rem;
+  align-items: center;
+}
+
+.principal__titulo {
+  grid-area: titulo;
+}
+
+.principal__libro {
+  grid-area: libro;
+  width: calc(3 * var(--imagen-ancho));
+  height: calc(3 * var(--imagen-alto));
+  justify-self: center;
+}
+
+.principal__descripcion {
+  grid-area: descripcion;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.principal__publicacion {
+  grid-area: publicacion;
+  place-self: center end;
+}
+
+.linea {
+  background-color: red;
+  width: 1rem;
+  height: auto;
+}
+
+.recomendacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  row-gap: 2rem;
+}
+
+.recomendacion a {
+  display: block;
+}
+
+.recomendacion__libro {
+  width: calc(1.5 * var(--imagen-ancho));
+  height: calc(1.5 * var(--imagen-alto));
+}
+
+.contenedor {
+  display: grid;
+  height: auto;
+  padding: 5rem;
+  grid-template-columns: auto 11rem min-content;
+  justify-items: center;
+}
