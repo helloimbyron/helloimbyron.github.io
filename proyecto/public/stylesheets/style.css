@@ -1,0 +1,190 @@
+
+/*
+Documentación:
+https://materializecss.com/
+*/
+
+
+
+/* Estilos generales */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, h3, h5 {
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+#nosotros, #eventos, #actividades {
+  padding: 2.5rem 0;
+  width: 90%;
+}
+
+#tarjeta {
+  margin: 0.75rem 0;
+}
+
+#tarjeta__encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+#tarjeta__encabezado span {
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+/* Banner */
+
+#banner {
+  padding-top: 5rem;
+  height: 17.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#banner__encabezado {
+  margin: 0;
+}
+
+#banner__encabezado--logo {
+  width: 4rem;
+}
+
+#navegacion {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Nosotros */
+
+#nosotros--j3dc {
+  margin-bottom: 2rem;
+}
+
+#nosotros--lideres {
+  margin: 2rem 0;
+}
+
+#nosotros__carrusel--imagen {
+  filter: brightness(65%);
+}
+
+#nosotros .indicator-item.active {
+  background-color: #2979ff;
+}
+
+#nosotros .divider  {
+  margin-top: 1.5rem;
+}
+
+/* Eventos */
+
+.card .card-content .card-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}
+
+.card .collapsible .collapsible-header {
+  font-weight: 500;
+  margin: 0;
+}
+
+/* FAB */
+
+#fab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#fab__icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Formulario */
+
+#formulario h5, #formulario p {
+  text-align: center;
+}
+
+#formulario span {
+  font-weight: 500;
+}
+
+/* Color de label */
+#formulario .input-field label {
+  color: #000;
+}
+
+/* Color del ícono */
+#formulario .input-field .prefix.active {
+  color: #2979ff;
+}
+
+/* Color del label:focus */
+#formulario .input-field input[type=text]:focus + label {
+  color: #2979ff;
+}
+
+/* Color de la línea del label:fouces */
+#formulario .input-field input[type=text]:focus {
+  border-bottom: 1px solid #2979ff;
+  box-shadow: 0 1px 0 0 #2979ff;
+}
+
+/* Color válido */
+#formulario .input-field input[type=text].valid {
+  border-bottom: 1px solid #2979ff;
+  box-shadow: 0 1px 0 0 #2979ff;
+}
+
+/* Color inválido */
+#formulario .input-field input[type=text].invalid {
+  border-bottom: 1px solid #ff5252;
+  box-shadow: 0 1px 0 0 #ff5252;
+}
+
+/* Color del label:focus */
+#formulario .input-field input[type=tel]:focus + label {
+  color: #2979ff;
+}
+
+/* Color de la línea del label:fouces */
+#formulario .input-field input[type=tel]:focus {
+  border-bottom: 1px solid #2979ff;
+  box-shadow: 0 1px 0 0 #2979ff;
+}
+
+/* Color válido */
+#formulario .input-field input[type=tel].valid {
+  border-bottom: 1px solid #2979ff;
+  box-shadow: 0 1px 0 0 #2979ff;
+}
+
+/* Color inválido */
+#formulario .input-field input[type=tel].invalid {
+  border-bottom: 1px solid #ff5252;
+  box-shadow: 0 1px 0 0 #ff5252;
+}
