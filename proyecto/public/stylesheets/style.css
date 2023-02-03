@@ -49,6 +49,8 @@ h1, h3, h5 {
   flex-direction: column;
   align-items: start;
   margin-bottom: 1rem;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 #tarjeta__encabezado span {
