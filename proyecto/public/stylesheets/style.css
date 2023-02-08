@@ -1,11 +1,4 @@
 
-/*
-Documentación:
-https://materializecss.com/
-*/
-
-
-
 /* Estilos generales */
 
 html {
@@ -97,6 +90,10 @@ h1, h3, h5 {
 
 #nosotros .divider  {
   margin-top: 1.5rem;
+}
+
+#nosotros h5 {
+  margin-bottom: 1rem;
 }
 
 /* Eventos */

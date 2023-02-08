@@ -95,7 +95,7 @@
       <div class="section row">
         <div class="col s12 m10 offset-m1">
           <div class="card-panel blue accent-3" id="tarjeta">
-            <div id="tarjeta__encabezado">
+            <div>
               <h5 class="white-text">¿Qué es J3DC?</h5>
             </div>
             <span class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem aspernatur quasi omnis, accusantium nobis in voluptatibus labore inventore doloribus nesciunt, voluptas error totam incidunt, numquam ab at deleniti autem vero!</span>
@@ -104,7 +104,7 @@
 
         <div class="col s12 m5 offset-m1">
           <div class="card-panel blue lighten-5" id="tarjeta">
-            <div id="tarjeta__encabezado">
+            <div>
               <h5 class="black-text">Misión</h5>
             </div>
             <span class="black-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem aspernatur quasi omnis, accusantium nobis in voluptatibus labore inventore doloribus nesciunt, voluptas error totam incidunt, numquam ab at deleniti autem vero!</span>
@@ -113,7 +113,7 @@
 
         <div class="col s12 m5">
           <div class="card-panel blue lighten-5" id="tarjeta">
-            <div id="tarjeta__encabezado">
+            <div>
               <h5 class="black-text">Visión</h5>
             </div>
             <span class="black-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem aspernatur quasi omnis, accusantium nobis in voluptatibus labore inventore doloribus nesciunt, voluptas error totam incidunt, numquam ab at deleniti autem vero!</span>
@@ -727,7 +727,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       M.AutoInit();
       var elems = document.querySelectorAll('.fixed-action-btn');
-      var instances = M.FloatingActionButton.init(elems, {hoverEnabled: false});
+      var instances = M.FloatingActionButton.init(elems);
       var elems = document.querySelectorAll('.slider');
       var instances = M.Slider.init(elems, {indicators: true, height: 540});
     });
