@@ -1,0 +1,97 @@
+---
+import { capitalizeFirstLetter, getMonthAndYear } from "@/utils/utils";
+import Pill from "@/components/Pill.astro";
+
+const { description, endDate, keywords, place, placerUrl, startDate, title } =
+  Astro.props;
+
+const startYear = startDate ? getMonthAndYear(startDate) : null;
+const endYear = endDate ? getMonthAndYear(endDate) : "hoy";
+---
+
+<li>
+  <article>
+    <header>
+      <div>
+        <h3>{title}</h3>
+        <a
+          href={placerUrl}
+          rel="noopener noreferrer"
+          target="_blank"
+          title={`Ver ${place}`}
+        >
+          {place}
+        </a>
+      </div>
+
+      <div>
+        {
+          startYear && (
+            <>
+              <time data-title={startDate} datetime={startDate}>
+                {capitalizeFirstLetter(startYear)}
+              </time>
+              <span> - </span>
+            </>
+          )
+        }
+        <time data-title={endDate} datetime={endDate}>
+          {startYear && endYear ? endYear : capitalizeFirstLetter(endYear)}
+        </time>
+      </div>
+    </header>
+
+    {
+      description && (
+        <section>
+          <p>{description}</p>
+        </section>
+      )
+    }
+
+    {
+      keywords && keywords.length > 0 && (
+        <footer>
+          <ul>
+            {keywords.map((keyword: string) => (
+              <Pill name={keyword} />
+            ))}
+          </ul>
+        </footer>
+      )
+    }
+  </article>
+</li>
+
+<style>
+  article a:hover {
+    text-decoration: underline;
+  }
+
+  header {
+    align-items: flex-start;
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  footer {
+    margin-top: 4px;
+  }
+
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (width <= 700px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 0;
+    }
+  }
+</style>

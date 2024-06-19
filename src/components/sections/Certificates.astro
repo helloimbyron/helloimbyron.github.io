@@ -1,0 +1,59 @@
+---
+import { certificates } from "@cv";
+import { type Highlight } from "@/cv";
+import Section from "@/components/Section.astro";
+import Statement from "@/components/Statement.astro";
+---
+
+{
+  certificates && certificates.length > 0 && (
+    <Section title="Certificados">
+      <ul>
+        {certificates.map(
+          ({
+            endDate,
+            highlights,
+            issuer,
+            name,
+            score,
+            startDate,
+            summary,
+            url,
+          }) => {
+            const formattedScore = score ? `Nota: ${score} / 10.0` : null;
+
+            let keywords: Highlight = [];
+
+            if (highlights) {
+              keywords = [...highlights];
+            }
+
+            if (formattedScore) {
+              keywords.unshift(formattedScore);
+            }
+
+            return (
+              <Statement
+                description={summary}
+                endDate={endDate}
+                keywords={keywords}
+                place={issuer}
+                placerUrl={url}
+                startDate={startDate}
+                title={name}
+              />
+            );
+          }
+        )}
+      </ul>
+    </Section>
+  )
+}
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+</style>

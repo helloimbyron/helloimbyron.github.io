@@ -1,0 +1,69 @@
+---
+import { skills } from "@cv";
+import CSharp from "@/icons/CSharp.astro";
+import CSS from "@/icons/CSS.astro";
+import Flutter from "@/icons/Flutter.astro";
+import Git from "@/icons/Git.astro";
+import GitHub from "@/icons/GitHub.astro";
+import HTML from "@/icons/HTML.astro";
+import JavaScript from "@/icons/JavaScript.astro";
+import MySQL from "@/icons/MySQL.astro";
+import NodeJS from "@/icons/NodeJS.astro";
+import Pill from "@/components/Pill.astro";
+import Python from "@/icons/Python.astro";
+import ReactJS from "@/icons/ReactJS.astro";
+import Section from "@/components/Section.astro";
+import TailwindCSS from "@/icons/TailwindCSS.astro";
+import TypeScript from "@/icons/TypeScript.astro";
+
+const SKILLS_ICONS: Record<string, any> = {
+  CSharp,
+  CSS,
+  Flutter,
+  Git,
+  GitHub,
+  HTML,
+  JavaScript,
+  MySQL,
+  NodeJS,
+  Python,
+  ReactJS,
+  TailwindCSS,
+  TypeScript,
+};
+---
+
+<Section title="Tecnologías">
+  <ul>
+    {
+      skills.map(({ key, name }) => {
+        const Icon = SKILLS_ICONS[key];
+
+        return (
+          <Pill name={name}>
+            <Icon />
+          </Pill>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  li {
+    align-items: center;
+    background: #eee;
+    border-radius: 6px;
+    color: black;
+    display: flex;
+    font-size: 0.8rem;
+    gap: 4px;
+    padding: 0.2rem 0.6rem;
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import { awards } from "@cv";
+import Section from "@/components/Section.astro";
+import Statement from "@/components/Statement.astro";
+---
+
+{
+  awards && awards.length > 0 && (
+    <Section title="Premios">
+      <ul>
+        {awards.map(({ awarder, date, summary, title, url }) => {
+          return (
+            <Statement
+              description={summary}
+              endDate={date}
+              place={awarder}
+              placerUrl={url}
+              title={title}
+            />
+          );
+        })}
+      </ul>
+    </Section>
+  )
+}
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import { TEXT_COLOR } from "@/constants/colors";
+---
+
+<hr class="print" />
+
+<style define:vars={{ TEXT_COLOR }}>
+  hr {
+    background-color: var(--TEXT_COLOR);
+    height: 1px;
+  }
+
+  @media print and (color) {
+    * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>

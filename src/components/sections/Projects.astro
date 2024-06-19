@@ -1,0 +1,151 @@
+---
+import { projects } from "@cv";
+
+import { ACCENT_COLOR, IS_ACTIVE_COLOR, TEXT_COLOR } from "@/constants/colors";
+
+import Section from "@/components/Section.astro";
+import GitHub from "@/icons/GitHub.astro";
+---
+
+{
+  projects && projects.length > 0 && (
+    <Section title="Proyectos">
+      <ul>
+        {projects.map(
+          ({ description, github, highlights, isActive, name, url }) => {
+            return (
+              <li>
+                <article>
+                  <header>
+                    <h3>
+                      <a
+                        class={`${url ? "withUrl" : "withoutUrl"}`}
+                        href={url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        title={`${url && `Ver el proyecto ${name}`}`}
+                      >
+                        {name}
+                        {isActive && <span> • </span>}
+                      </a>
+                    </h3>
+                    {github && (
+                      <a
+                        href={github}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        title={`Ver código fuente del proyecto ${name}`}
+                      >
+                        <GitHub height="20" width="20" />
+                      </a>
+                    )}
+                  </header>
+
+                  <p>{description}</p>
+
+                  {highlights && highlights.length > 0 && (
+                    <footer>
+                      {highlights.map((highlight) => {
+                        return <span>{highlight}</span>;
+                      })}
+                    </footer>
+                  )}
+                </article>
+              </li>
+            );
+          }
+        )}
+      </ul>
+    </Section>
+  )
+}
+
+<style define:vars={{ ACCENT_COLOR, IS_ACTIVE_COLOR, TEXT_COLOR }}>
+  ul {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-inline: -16px;
+  }
+
+  article {
+    border-radius: 8px;
+    border: 1px solid var(--ACCENT_COLOR);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    padding: 16px;
+  }
+
+  article header {
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+  }
+
+  .withUrl:hover {
+    text-decoration: underline;
+  }
+
+  .withoutUrl:hover {
+    cursor: text;
+  }
+
+  article header span {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: flicker;
+    animation-timing-function: ease-in;
+    color: var(--IS_ACTIVE_COLOR);
+  }
+
+  article header a {
+    margin: 0;
+  }
+
+  article p {
+    flex: 1;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.6rem;
+    gap: 4px;
+  }
+
+  footer span {
+    background: var(--ACCENT_COLOR);
+    border-radius: 8px;
+    color: var(--TEXT_COLOR);
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.25;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media (width <= 700px) {
+    ul {
+      margin-inline: 0px;
+    }
+  }
+
+  @media print {
+    article h3 span {
+      animation-name: none;
+    }
+  }
+</style>

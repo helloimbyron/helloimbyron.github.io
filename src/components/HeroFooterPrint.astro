@@ -1,0 +1,61 @@
+---
+import { basics } from "@cv";
+import { SOCIAL_ICONS } from "@/constants/social_icons";
+import Mail from "@/icons/Mail.astro";
+import Phone from "@/icons/Phone.astro";
+
+const { email, phone, profiles } = basics;
+---
+
+<!-- <footer> -->
+<footer class="print">
+  {
+    email && (
+      <span>
+        <Mail height="16" width="16" />
+        {email}
+      </span>
+    )
+  }
+
+  {
+    phone && (
+      <span>
+        <Phone height="16" width="16" />
+        {phone}
+      </span>
+    )
+  }
+
+  {
+    profiles.map(({ network, url }) => {
+      if (network && url) {
+        const Icon = SOCIAL_ICONS[network];
+        const username = "/" + url.split("/").at(-1);
+
+        return (
+          <span>
+            <Icon height="16" width="16" />
+            {username}
+          </span>
+        );
+      }
+    })
+  }
+
+  <br />
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  span {
+    align-items: center;
+    display: flex;
+    gap: 0.35rem;
+  }
+</style>

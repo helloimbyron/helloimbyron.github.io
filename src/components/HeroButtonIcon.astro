@@ -1,0 +1,28 @@
+---
+import { ACCENT_COLOR } from "@/constants/colors";
+
+const { href, title } = Astro.props;
+---
+
+<a href={href} rel="noopener noreferrer" target="_blank" title={title}>
+  <slot />
+</a>
+
+<style define:vars={{ ACCENT_COLOR }}>
+  a {
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--ACCENT_COLOR);
+    color: var(--TEXT_COLOR);
+    display: inline-flex;
+    height: 32px;
+    justify-content: center;
+    padding: 4px;
+    transition: all 0.3s ease;
+    width: 32px;
+  }
+
+  a:hover {
+    background: var(--ACCENT_COLOR);
+  }
+</style>

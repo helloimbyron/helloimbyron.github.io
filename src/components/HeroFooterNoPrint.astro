@@ -1,0 +1,55 @@
+---
+import { basics } from "@cv";
+import { SOCIAL_ICONS } from "@/constants/social_icons";
+import HeroButtonIcon from "@/components/HeroButtonIcon.astro";
+import Mail from "@/icons/Mail.astro";
+import Phone from "@/icons/Phone.astro";
+
+const { email, name, phone, profiles } = basics;
+---
+
+<footer class="no-print">
+  {
+    email && (
+      <HeroButtonIcon
+        href={`mailto:${email}`}
+        title={`Enviar un correo electrónico a ${name}`}
+      >
+        <Mail />
+      </HeroButtonIcon>
+    )
+  }
+  {
+    phone && (
+      <HeroButtonIcon
+        href={`tel:${phone}`}
+        title={`Llamar por teléfono a ${name}`}
+      >
+        <Phone />
+      </HeroButtonIcon>
+    )
+  }
+  {
+    profiles.map(({ network, url }) => {
+      if (network && url) {
+        const Icon = SOCIAL_ICONS[network];
+
+        return (
+          <HeroButtonIcon
+            href={url}
+            title={`Visitar el perfil de ${name} en ${network}`}
+          >
+            <Icon />
+          </HeroButtonIcon>
+        );
+      }
+    })
+  }
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 8px;
+  }
+</style>

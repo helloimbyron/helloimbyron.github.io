@@ -1,0 +1,180 @@
+---
+import { BACKGROUND_COLOR, TITLE_COLOR, TEXT_COLOR } from "@/constants/colors";
+import { basics } from "@cv";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const { image, summary, url } = basics;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="description" content={summary} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="image" href={image} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={summary} />
+    <meta property="og:image" content="" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global define:vars={{ BACKGROUND_COLOR, TITLE_COLOR, TEXT_COLOR }}>
+  html {
+    background: var(--BACKGROUND_COLOR);
+    font-family: "Montserrat";
+  }
+
+  body,
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--TITLE_COLOR);
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3,
+  h4 {
+    font-size: 1rem;
+  }
+
+  p,
+  span,
+  time,
+  a {
+    color: var(--TEXT_COLOR);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  time {
+    cursor: default;
+    min-width: 100px;
+  }
+
+  [data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease-in-out 0.5s;
+    visibility: visible;
+  }
+
+  [data-title]:after {
+    background-color: #333;
+    border-radius: 6px;
+    border: 1px solid #111111;
+    bottom: -1.4rem;
+    box-shadow: 1px 1px 1px #222222;
+    color: #fff;
+    content: attr(data-title);
+    font-size: 0.75rem;
+    left: 50%;
+    opacity: 0;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    visibility: hidden;
+    white-space: nowrap;
+    z-index: 99999;
+  }
+
+  [data-title] {
+    position: relative;
+  }
+
+  .print {
+    display: none !important;
+  }
+
+  @media print {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    h3,
+    h4 {
+      font-size: 0.75rem;
+    }
+
+    p,
+    span,
+    time,
+    a {
+      font-size: 0.75rem;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+
+    .print {
+      display: block !important;
+    }
+
+    astro-dev-toolbar {
+      display: none !important;
+    }
+
+    article {
+      break-inside: avoid;
+    }
+  }
+</style>

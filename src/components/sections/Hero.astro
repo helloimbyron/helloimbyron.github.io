@@ -1,0 +1,93 @@
+---
+import { basics } from "@cv";
+import Divider from "@/components/Divider.astro";
+import HeroFooterNoPrint from "@/components/HeroFooterNoPrint.astro";
+import HeroFooterPrint from "@/components/HeroFooterPrint.astro";
+import Section from "@/components/Section.astro";
+import WorldMap from "@/icons/WorldMap.astro";
+
+const { image, label, location, name } = basics;
+const { city, region } = location;
+---
+
+<Section>
+  <div class="container">
+    <div class="info">
+      <h1>{name}</h1>
+
+      <div class="group-info">
+        <p>{label}</p>
+        <span>
+          <WorldMap />
+          {city}, {region}
+        </span>
+      </div>
+
+      <HeroFooterNoPrint />
+
+      <Divider />
+      <HeroFooterPrint />
+    </div>
+    {
+      image && (
+        <figure class="no-print">
+          <img alt={`Foto de ${name}`} src={image} />
+        </figure>
+      )
+    }
+  </div>
+</Section>
+
+<style>
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    object-fit: cover;
+    width: 128px;
+  }
+
+  span {
+    align-items: center;
+    display: flex;
+    gap: 0.35rem;
+  }
+
+  @media (width <= 700px) {
+    .container {
+      flex-direction: column-reverse;
+    }
+
+    .info {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .group-info {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    figure {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
+</style>

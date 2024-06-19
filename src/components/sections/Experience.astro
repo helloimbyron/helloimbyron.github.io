@@ -1,0 +1,45 @@
+---
+import { work } from "@cv";
+import Section from "@/components/Section.astro";
+import Statement from "@/components/Statement.astro";
+---
+
+{
+  work && work.length > 0 && (
+    <Section title="Experiencia laboral">
+      <ul>
+        {work.map(
+          ({
+            endDate,
+            highlights,
+            name,
+            position,
+            startDate,
+            summary,
+            url,
+          }) => {
+            return (
+              <Statement
+                description={summary}
+                endDate={endDate}
+                keywords={highlights}
+                place={name}
+                placerUrl={url}
+                startDate={startDate}
+                title={position}
+              />
+            );
+          }
+        )}
+      </ul>
+    </Section>
+  )
+}
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+</style>

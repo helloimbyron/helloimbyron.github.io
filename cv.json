@@ -1,0 +1,208 @@
+{
+  "basics": {
+    "name": "Byron León Liang",
+    "label": "Web and mobile developer",
+    "image": null,
+    "email": "byleonliang@outlook.com",
+    "phone": null,
+    "url": null,
+    "summary": "Soy un productor audiovisual que ha incursionado en el desarrollo de software. Comencé con la programación web. Actualmente laboro como mobile developer con Flutter y .NET Framework. Deseo especializarme en el back-end para entender el funcionamiento de la web desde dentro —aquella parte que el usuario desconoce, pero que es el motor de la industria digital.",
+    "location": {
+      "address": null,
+      "postalCode": null,
+      "city": "Guayaquil",
+      "countryCode": "ECU",
+      "region": "Ecuador"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "helloimbyron",
+        "url": "https://github.com/helloimbyron"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "Byron León Liang",
+        "url": "https://www.linkedin.com/in/byronleonliang"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Escuela Superior Politénica del Litoral",
+      "position": "Full-Stack Mobile Developer",
+      "summary": "Desarrollo y soporte de una aplicación móvil multiplataforma que conecta diversos servicios de la universidad para mejorar la experiencia educacional de los estudiantes politécnicos con Flutter y .NET Framework.",
+      "url": "https://www.espol.edu.ec",
+      "startDate": "2023-09-20",
+      "endDate": null,
+      "highlights": null
+    }
+  ],
+  "volunteer": null,
+  "education": [
+    {
+      "institution": "Escuela Superior Politénica del Litoral",
+      "area": "Lic. en Producción para Medios de Comunicación",
+      "summary": "Conocimiento teórico y práctico para la creación, producción y difusión de diversos contenidos audiovisuales en sus diferentes fases.",
+      "url": "https://www.fadcom.espol.edu.ec/es",
+      "studyType": "Bachelor",
+      "startDate": "2017-05-01",
+      "endDate": "2021-11-23",
+      "score": "9.19",
+      "courses": null,
+      "highlights": null
+    }
+  ],
+  "certificates": [
+    {
+      "issuer": "Fundación Telefónica Movistar",
+      "name": "Big Data y Bases de Datos",
+      "summary": "Fundamentos en SQL y Python para Big Data, ETL, visualización de datos e inteligencia artificial.",
+      "url": "https://fundaciontelefonica.com.ec",
+      "startDate": "2023-11-28",
+      "endDate": "2024-01-25",
+      "score": null,
+      "highlights": null
+    },
+    {
+      "issuer": "Coding Bootcamps ESPOL",
+      "name": "Full Stack Developer",
+      "summary": "Competencias para el desarrollo de web apps con el stack MERN (Mongo, Express.js, React.js y Node.js). Además de materias complementarias como AWS, Docker,  MySQL, SCRUM y comunicación asertiva.",
+      "url": "https://bootcamps.espol.edu.ec",
+      "startDate": "2023-01-09",
+      "endDate": "2023-07-15",
+      "score": "9.87",
+      "highlights": [
+        "Beca"
+      ]
+    },
+    {
+      "issuer": "Sociedad Ecuatoriana de Estadística",
+      "name": "Ciencia de Datos",
+      "summary": "Fundamentos del análisis estadístico; aprendizaje supervisado y no supervisado; y statistical y machine learning con R y Python.",
+      "url": "https://see-ec.org/wordpress",
+      "startDate": "2021-10-16",
+      "endDate": "2022-02-16",
+      "score": null,
+      "highlights": [
+        "Beca"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "awarder": "Benemérita Sociedad Filantrópica del Guayas",
+      "title": "Medalla La Filatrópica",
+      "summary": "En reconocimiento al excelente aprovechamiento académico durante el período lectivo 2021 - 2022.",
+      "date": "2022-11-21",
+      "url": "https://sociedadfilantropica.org"
+    },
+    {
+      "awarder": "Escuela Superior Politécnica del Litoral",
+      "title": "Insignia Mérito Académico al Mejor Graduado por Facultad",
+      "summary": "Por ser el mejor graduado de la Facultad de Arte, Diseño y Comunicación Audiovisual, al obtener el más alto índice del Mérito de Graduación, dentro del grupo de los graduados de la Trigésima Cuarta Promoción de la ESPOL.",
+      "date": "2022-08-20",
+      "url": "https://www.espol.edu.ec"
+    },
+    {
+      "awarder": "Secretaría de Educación Superior, Ciencia, Tecnología e Innovación",
+      "title": "Grupo de Alto Rendimiento: VIII Promoción",
+      "summary": "Clasificado entre los 240 mejores puntuados en el Examen Nacional para la Educación Superior (ENES).",
+      "date": "2015-05-09",
+      "url": "https://www.educacionsuperior.gob.ec"
+    }
+  ],
+  "publications": null,
+  "skills": [
+    {
+      "name": "HTML",
+      "key": "HTML",
+      "level": null,
+      "keywords": null
+    },
+    {
+      "name": "CSS",
+      "key": "CSS",
+      "level": null,
+      "keywords": null
+    },
+    {
+      "name": "JavaScript",
+      "key": "JavaScript",
+      "level": null,
+      "keywords": null
+    },
+    {
+      "name": "TypeScript",
+      "key": "TypeScript",
+      "level": null,
+      "keywords": null
+    },
+    {
+      "name": "Node.js",
+      "key": "NodeJS",
+      "level": null,
+      "keywords": null
+    },
+    {
+      "name": "React.js",
+      "key": "ReactJS",
+      "level": null,
+      "keywords": null
+    },
+    {
+      "name": "Tailwind CSS",
+      "key": "TailwindCSS",
+      "level": null,
+      "keywords": null
+    },
+    {
+      "name": "Flutter",
+      "key": "Flutter",
+      "level": null,
+      "keywords": null
+    },
+    {
+      "name": "C#",
+      "key": "CSharp",
+      "level": null,
+      "keywords": null
+    },
+    {
+      "name": "Python",
+      "key": "Python",
+      "level": null,
+      "keywords": null
+    },
+    {
+      "name": "MySQL",
+      "key": "MySQL",
+      "level": null,
+      "keywords": null
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Intermediate"
+    }
+  ],
+  "interests": null,
+  "references": null,
+  "projects": [
+    {
+      "name": "Click & Fix",
+      "isActive": false,
+      "description": "Desarrollado durante mi estadía en Coding Bootcamps ESPOL, en el 2023. 🐢",
+      "highlights": [
+        "Proyecto de aprendizaje"
+      ],
+      "github": "https://github.com/helloimbyron/click-and-fix",
+      "url": null
+    }
+  ]
+}
